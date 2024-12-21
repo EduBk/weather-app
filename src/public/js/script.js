@@ -43,7 +43,7 @@ function getWeather(searchQuery) {
     units: "metric",
   };
   if (searchQuery) {
-    params.q = `${searchQuery},MX`;
+    params.q = `${searchQuery}`;
   } else {
     params.id = 3979770;
   }
