@@ -1,0 +1,179 @@
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --s-title: clamp(1rem, 4vw + 1rem, 2rem);
+  --s-subtitle: clamp(0.5rem, 4vw + 1rem, 1rem);
+  --s-description: clamp(0.5rem, 4vw + 1rem, 1rem);
+}
+
+html, body {
+  background: var(--white);
+  color: var(--navy);
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.header svg {
+  color: var(--navy);
+  fill: var(--navy);
+  margin-top: 5px;
+}
+
+.header input.search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: auto;
+  height: 50px;
+  transition: border-color 0.2s;
+  color: var(--lightest-navy);
+  vertical-align: top;
+  border-bottom: 1px solid var(--navy);
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+::-webkit-input-placeholder {
+  color: var(--lightest-navy);
+}
+
+button {
+  display: none;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#map {
+  width: 100%;
+  max-width: 600px;
+  pointer-events: none;
+  height: 600px;
+}
+
+.city, .country, .ampm, .time {
+  font-size: clamp(1rem, 3vw, 2.5rem);
+}
+
+/* 
+  LEFT SIDE
+*/
+
+.icon {
+  font-size: 50px;
+  position: relative;
+  top: -7px;
+  margin-right: 15px;
+}
+
+.temp-display {
+  font-size: 72px;
+}
+
+.unit {
+  font-size: 30px;
+  vertical-align: top;
+  line-height: 74px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* 
+  RIGHT SIDE
+*/
+
+.ampm {
+  margin-left: 15px;
+}
+
+.desc-display {
+  font-size: clamp(0.5rem, 1vw + 0.7rem, 1.3rem);
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.forecast {
+  clear: both;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.day-wrapper {
+  display: inline-block;
+  margin: 0 24px;
+  text-align: center;
+}
+
+.day {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  color: var(--light-navy);
+}
+
+.max {
+  font-size: 28px;
+}
+
+.min {
+  font-size: 16px;
+  color: var(--light-navy);
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .container {
+    width: 100%;
+    justify-content: center;
+  }
+}
