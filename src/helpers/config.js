@@ -1,4 +1,10 @@
-process.loadEnvFile();
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    process.loadEnvFile();
+  } catch (error) {
+    console.log('No .env file found, using environment variables');
+  }
+}
 
 const {
   NODE_ENV: enviroment = "development",
