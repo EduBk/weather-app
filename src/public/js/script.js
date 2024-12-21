@@ -37,7 +37,7 @@ function searchWeather() {
 }
 
 function getWeather(searchQuery) {
-  let url = "http://api.openweathermap.org/data/2.5/weather?";
+  let url = "https://api.openweathermap.org/data/2.5/weather?";
   let params = {
     APPID: apiKey,
     units: "metric",
@@ -201,7 +201,7 @@ function searchForecast() {
 }
 
 function getForecast( searchQuery ) {
-  let url = 'http://api.openweathermap.org/data/2.5/forecast/daily?';
+  let url = 'https://api.openweathermap.org/data/2.5/forecast/daily?';
   let params = {
     APPID: apiKey,
     units: 'imperial'
