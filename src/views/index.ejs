@@ -31,15 +31,15 @@
 
   <body>
     <main class="content">
-      <div class="header">
-        <div>
+      <header class="header">
+        <div class="search-container">
           <input
             id="search-box"
             class="search"
             type="text"
             placeholder="Search by name or zip code"
           />
-          <svg class="svgIcon-use" width="50" height="50" viewBox="0 0 25 25">
+          <svg class="svgIcon-use search-icon" width="50" height="50" viewBox="0 0 25 25">
             <path
               d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"
             ></path>
@@ -48,7 +48,7 @@
         <button id="search-button" type="button" onclick="searchWeather()">
           Search
         </button>
-      </div>
+      </header>
       <div class="error-message"></div>
       <div class="container">
         <div class="left">
@@ -95,6 +95,9 @@
         </div>
       </div>
       <div id="map"></div>
+      <footer class="footer">
+        <p>🅴duardo 🅼artinez 🅲ardenas</p>
+      </footer>
     </main>
   </body>
 </html>

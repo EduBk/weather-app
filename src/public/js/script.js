@@ -62,10 +62,6 @@ function getWeather(searchQuery) {
     let max = Math.round(data.main.temp_max);
     let min = Math.round(data.main.temp_min);
 
-    if (data.weather[0].description === "clear sky") {
-      data.weather[0].description = "clear skies";
-    }
-
     $(".city").text(data.name);
     $(".country").text(data.sys.country);
     $(".description").text(data.weather[0].description);
@@ -204,7 +200,7 @@ function getForecast( searchQuery ) {
   let url = 'https://api.openweathermap.org/data/2.5/forecast/daily?';
   let params = {
     APPID: apiKey,
-    units: 'imperial'
+    units: 'metric'
   };
   if (searchQuery) {
     params.q = searchQuery;
